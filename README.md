@@ -148,13 +148,15 @@ I'm focused on making **meaningful contributions rather than just collecting con
 
 ---
 
+
+
 ## GitHub Activity
 
 <p align="center">
   <img
     src="./assets/github-activity.svg"
-    alt="Apoorv's GitHub Contribution Activity"
-    width="100%"
+    alt="Apoorv's GitHub Activity"
+    width="850"
   />
 </p>
 
