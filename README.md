@@ -151,7 +151,11 @@ I'm focused on making **meaningful contributions rather than just collecting con
 ## GitHub Activity
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/409ba5/apoorv2202" alt="Apoorv's GitHub Contribution Graph" />
+  <img
+    src="./assets/github-activity.svg"
+    alt="Apoorv's GitHub Contribution Activity"
+    width="100%"
+  />
 </p>
 
 <!-- GITHUB-METRICS:START -->
