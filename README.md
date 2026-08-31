@@ -64,12 +64,9 @@ I'm also a contributor with **Open Source Connect India 2026**, where I'm gettin
 
 ---
 
-
 ## Problem Solving
 
 I practice DSA consistently on [LeetCode](https://leetcode.com/u/_apoorv10/).
-
-
 
 <p align="center">
   <a href="https://leetcode.com/u/_apoorv10/">
@@ -94,8 +91,6 @@ An AI-powered video intelligence platform, designed so users can upload a video 
 - AI-driven scene and context analysis
 - Media metadata extraction
 
-
-
 ---
 
 ### DevTrack — *early development*
@@ -108,8 +103,6 @@ A developer workflow and issue management platform inspired by modern developer 
 - Project and workflow organization
 - Developer collaboration features
 
-
-
 ---
 
 ### SecureShare — *built*
@@ -121,8 +114,6 @@ A security-focused platform for controlled, temporary sharing of sensitive infor
 - Secure, time-limited information sharing
 - Security-focused backend architecture
 - Cloud-backed infrastructure with Azure integration
-
-
 
 ---
 
@@ -138,8 +129,6 @@ A mobile-first hostel management platform designed to simplify everyday hostel s
 - Stock and cart system
 - Payment integration
 - Document uploads
-
-
 
 ---
 
@@ -184,11 +173,6 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
-### Recent GitHub Activity
-
-- 📝 Pushed commits to `DevTrack`
-- 📝 Pushed commits to `Leetcode-Solutions`
-
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
@@ -204,6 +188,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 - 🚀 Shipping Audix and DevTrack
 - 🏗️ Building production-quality software
 - 💻 Becoming a stronger software engineer through real-world development
+
 ---
 
 ## Contact
@@ -212,7 +197,3 @@ I'm focused on making **meaningful contributions rather than just collecting con
 [![X](https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white)](https://x.com/_apoorv10)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@apoorv.10axp)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black)](https://leetcode.com/u/_apoorv10/)
-
-<!-- PROFILE-UPDATED:START -->
-*Last automatically updated: August 31, 2026 · 16:44 UTC*
-<!-- PROFILE-UPDATED:END -->
