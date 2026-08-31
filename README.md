@@ -156,15 +156,33 @@ This is an ongoing part of how I'm developing as an engineer.
 ## GitHub Activity
 
 <!-- GITHUB-METRICS:START -->
+| Metric | Value |
+|---|---:|
+| Public Repositories | 6 |
+| Followers | 2 |
+| Following | 1 |
+| Total Stars | 4 |
+| Total Forks | 0 |
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
+- **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
+- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
+- **[DevTrack](https://github.com/apoorv2202/DevTrack)** — Modern, role-aware developer issue tracking platform inspired by Bugzilla
+- **[secure-share](https://github.com/apoorv2202/secure-share)** — A modern privacy-focused platform for securely sharing temporary sensitive information with controlled access, client-side encryption, and proactive security protection.
+- **[HostelHub](https://github.com/apoorv2202/HostelHub)** — "A real-time hostel portal & management platform built with Flutter, Supabase, and Squidex CMS. Features a campus-restricted food ordering engine, live service ticket streams, secure multi-role registration (Students, Canteen, Cleaners, Wardens), private storage buckets, and advanced Row-Level Security policies to protect user documents."
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
+- Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
+- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
+- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
+- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
+*Last automatically updated: August 31, 2026 · 16:44 UTC*
 <!-- PROFILE-UPDATED:END -->
 
 --
@@ -188,4 +206,5 @@ This is an ongoing part of how I'm developing as an engineer.
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black)](https://leetcode.com/u/_apoorv10/)
 
 <!-- PROFILE-UPDATED:START -->
+*Last automatically updated: August 31, 2026 · 16:44 UTC*
 <!-- PROFILE-UPDATED:END -->
