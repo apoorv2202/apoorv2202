@@ -1,27 +1,23 @@
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import requests
 
 
 USERNAME = "apoorv2202"
-LEETCODE_USERNAME = "_apoorv10"
 README = "README.md"
 
 GITHUB_API = "https://api.github.com"
-LEETCODE_API = "https://leetcode.com/graphql"
 
-
-# --------------------------------------------------
-# GitHub API
-# --------------------------------------------------
 
 def github_request(endpoint):
     token = os.getenv("GITHUB_TOKEN")
 
     headers = {
-        "Accept": "application/vnd.github+json"
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28"
     }
 
     if token:
@@ -37,64 +33,7 @@ def github_request(endpoint):
     return response.json()
 
 
-# --------------------------------------------------
-# LeetCode API
-# --------------------------------------------------
-
-def get_leetcode_stats():
-    query = """
-    query getUserProfile($username: String!) {
-        matchedUser(username: $username) {
-            submitStats {
-                acSubmissionNum {
-                    difficulty
-                    count
-                }
-            }
-        }
-    }
-    """
-
-    response = requests.post(
-        LEETCODE_API,
-        json={
-            "query": query,
-            "variables": {
-                "username": LEETCODE_USERNAME
-            }
-        },
-        headers={
-            "Content-Type": "application/json",
-            "User-Agent": "Mozilla/5.0"
-        },
-        timeout=20
-    )
-
-    response.raise_for_status()
-
-    data = response.json()
-
-    user = data.get("data", {}).get("matchedUser")
-
-    if not user:
-        return None
-
-    stats = user["submitStats"]["acSubmissionNum"]
-
-    result = {}
-
-    for item in stats:
-        result[item["difficulty"]] = item["count"]
-
-    return result
-
-
-# --------------------------------------------------
-# Replace README sections
-# --------------------------------------------------
-
 def replace_section(text, start_marker, end_marker, replacement):
-
     pattern = (
         re.escape(start_marker)
         + r".*?"
@@ -109,15 +48,11 @@ def replace_section(text, start_marker, end_marker, replacement):
     )
 
 
-# --------------------------------------------------
-# Main
-# --------------------------------------------------
-
 def main():
 
-    # ==================================================
-    # GitHub PROFILE
-    # ==================================================
+    # -------------------------
+    # GitHub profile
+    # -------------------------
 
     user = github_request(f"/users/{USERNAME}")
 
@@ -125,10 +60,9 @@ def main():
     following = user["following"]
     public_repos = user["public_repos"]
 
-
-    # ==================================================
-    # REPOSITORIES
-    # ==================================================
+    # -------------------------
+    # Repositories
+    # -------------------------
 
     repos = github_request(
         f"/users/{USERNAME}/repos?per_page=100&sort=updated"
@@ -146,10 +80,9 @@ def main():
 
     latest_repos = repos[:5]
 
-
-    # ==================================================
-    # GITHUB METRICS
-    # ==================================================
+    # -------------------------
+    # Metrics
+    # -------------------------
 
     metrics = f"""| Metric | Value |
 |---|---:|
@@ -159,62 +92,52 @@ def main():
 | Total Stars | {total_stars} |
 | Total Forks | {total_forks} |"""
 
-
-    # ==================================================
-    # LATEST REPOSITORIES
-    # ==================================================
+    # -------------------------
+    # Latest repositories
+    # -------------------------
 
     repository_section = ""
 
     for repo in latest_repos:
 
         name = repo["name"]
-
-        description = (
-            repo["description"]
-            or "No description provided."
-        )
-
+        description = repo["description"] or "No description provided."
         url = repo["html_url"]
 
         repository_section += (
             f"- **[{name}]({url})** — {description}\n"
         )
 
-
-    # ==================================================
-    # GITHUB RECENT ACTIVITY
-    # ==================================================
+    # -------------------------
+    # Recent activity
+    # -------------------------
 
     events = github_request(
-        f"/users/{USERNAME}/events/public?per_page=20"
+        f"/users/{USERNAME}/events/public?per_page=30"
     )
 
-    activity = ""
-
-    activity_count = 0
+    activity_lines = []
 
     for event in events:
 
-        if activity_count >= 5:
-            break
-
         event_type = event["type"]
+        repo = event.get("repo", {}).get("name")
 
-        repo = event["repo"]["name"]
+        if not repo:
+            continue
 
         if event_type == "PushEvent":
 
-            commits = len(
-                event["payload"].get("commits", [])
-            )
+            commit_count = event["payload"].get("size")
 
-            activity += (
-                f"- 📝 Pushed **{commits} commit(s)** "
-                f"to `{repo}`\n"
-            )
+            if commit_count is None:
+                commit_count = len(
+                    event["payload"].get("commits", [])
+                )
 
-            activity_count += 1
+            activity_lines.append(
+                f"- 📝 Pushed **{commit_count} commit(s)** to `{repo}`"
+            )
 
         elif event_type == "PullRequestEvent":
 
@@ -223,12 +146,9 @@ def main():
                 "updated"
             )
 
-            activity += (
-                f"- 🔀 {action.capitalize()} a pull request "
-                f"in `{repo}`\n"
+            activity_lines.append(
+                f"- 🔀 {action.capitalize()} a pull request in `{repo}`"
             )
-
-            activity_count += 1
 
         elif event_type == "IssuesEvent":
 
@@ -237,12 +157,9 @@ def main():
                 "updated"
             )
 
-            activity += (
-                f"- 🐛 {action.capitalize()} an issue "
-                f"in `{repo}`\n"
+            activity_lines.append(
+                f"- 🐛 {action.capitalize()} an issue in `{repo}`"
             )
-
-            activity_count += 1
 
         elif event_type == "CreateEvent":
 
@@ -251,69 +168,62 @@ def main():
                 "resource"
             )
 
-            activity += (
-                f"- 🚀 Created a {ref_type} "
-                f"in `{repo}`\n"
+            activity_lines.append(
+                f"- ✨ Created a {ref_type} in `{repo}`"
             )
 
-            activity_count += 1
+        elif event_type == "DeleteEvent":
 
-        elif event_type == "IssueCommentEvent":
-
-            activity += (
-                f"- 💬 Commented on an issue "
-                f"in `{repo}`\n"
+            ref_type = event["payload"].get(
+                "ref_type",
+                "resource"
             )
 
-            activity_count += 1
+            activity_lines.append(
+                f"- 🗑️ Deleted a {ref_type} in `{repo}`"
+            )
 
-    if not activity:
+        elif event_type == "ForkEvent":
 
-        activity = "- No recent public activity."
+            activity_lines.append(
+                f"- 🍴 Forked `{repo}`"
+            )
 
+        elif event_type == "WatchEvent":
 
-    # ==================================================
-    # LEETCODE STATISTICS
-    # ==================================================
+            activity_lines.append(
+                f"- ⭐ Starred `{repo}`"
+            )
 
-    leetcode_stats = get_leetcode_stats()
+        if len(activity_lines) >= 5:
+            break
 
-    if leetcode_stats:
-
-        easy = leetcode_stats.get("Easy", 0)
-        medium = leetcode_stats.get("Medium", 0)
-        hard = leetcode_stats.get("Hard", 0)
-
-        total = easy + medium + hard
-
-        leetcode_section = f"""| Difficulty | Solved |
-|---|---:|
-| 🟢 Easy | {easy} |
-| 🟡 Medium | {medium} |
-| 🔴 Hard | {hard} |
-| **Total** | **{total}** |"""
-
+    if activity_lines:
+        activity = (
+            "### Recent GitHub Activity\n\n"
+            + "\n".join(activity_lines)
+        )
     else:
-
-        leetcode_section = (
-            "Unable to fetch LeetCode statistics."
+        activity = (
+            "### Recent GitHub Activity\n\n"
+            "- No recent public activity."
         )
 
+    # -------------------------
+    # Last updated — IST
+    # -------------------------
 
-    # ==================================================
-    # LAST UPDATED
-    # ==================================================
-
-    now = datetime.now(timezone.utc)
-
-    updated = now.astimezone().strftime(
-        "%B %d, %Y · %I:%M %p %Z"
+    now = datetime.now(
+        ZoneInfo("Asia/Kolkata")
     )
 
+    updated = now.strftime(
+        "%B %d, %Y · %I:%M %p IST"
+    )
 
-    # ==================================================
-    # READ README
-    # ==================================================
+    # -------------------------
+    # Update README
+    # -------------------------
 
     with open(
         README,
@@ -323,22 +233,12 @@ def main():
 
         readme = file.read()
 
-
-    # ==================================================
-    # UPDATE GITHUB METRICS
-    # ==================================================
-
     readme = replace_section(
         readme,
         "<!-- GITHUB-METRICS:START -->",
         "<!-- GITHUB-METRICS:END -->",
         metrics
     )
-
-
-    # ==================================================
-    # UPDATE REPOSITORIES
-    # ==================================================
 
     readme = replace_section(
         readme,
@@ -347,34 +247,12 @@ def main():
         repository_section.strip()
     )
 
-
-    # ==================================================
-    # UPDATE ACTIVITY
-    # ==================================================
-
     readme = replace_section(
         readme,
         "<!-- ACTIVITY:START -->",
         "<!-- ACTIVITY:END -->",
-        f"### Recent GitHub Activity\n\n{activity.strip()}"
+        activity
     )
-
-
-    # ==================================================
-    # UPDATE LEETCODE
-    # ==================================================
-
-    readme = replace_section(
-        readme,
-        "<!-- LEETCODE-STATS:START -->",
-        "<!-- LEETCODE-STATS:END -->",
-        leetcode_section
-    )
-
-
-    # ==================================================
-    # UPDATE PROFILE TIMESTAMP
-    # ==================================================
 
     readme = replace_section(
         readme,
@@ -382,11 +260,6 @@ def main():
         "<!-- PROFILE-UPDATED:END -->",
         f"*Last automatically updated: {updated}*"
     )
-
-
-    # ==================================================
-    # WRITE README
-    # ==================================================
 
     with open(
         README,
@@ -396,17 +269,7 @@ def main():
 
         file.write(readme)
 
-
     print("README updated successfully.")
-
-    if leetcode_stats:
-
-        print(
-            f"LeetCode: "
-            f"{leetcode_stats.get('Easy', 0)} Easy, "
-            f"{leetcode_stats.get('Medium', 0)} Medium, "
-            f"{leetcode_stats.get('Hard', 0)} Hard"
-        )
 
 
 if __name__ == "__main__":
