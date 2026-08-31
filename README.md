@@ -66,13 +66,22 @@ I'm also a contributor with **Open Source Connect India 2026**, where I'm gettin
 
 ## Problem Solving
 
-I practice DSA consistently on [LeetCode](https://leetcode.com/u/_apoorv10/), currently focused on **Arrays, Bit Manipulation, Binary Search, Mathematics, Strings, and Recursion**.
+## Problem Solving
 
-- **Solved:** 55+ problems
-- **Profile:** [leetcode.com/u/_apoorv10](https://leetcode.com/u/_apoorv10/)
+I practice DSA consistently on [LeetCode](https://leetcode.com/u/_apoorv10/).
+
+<!-- LEETCODE-STATS:START -->
+Loading LeetCode statistics...
+<!-- LEETCODE-STATS:END -->
 
 <!-- LEETCODE-STATS:START -->
 <!-- LEETCODE-STATS:END -->
+
+<p align="center">
+  <a href="https://leetcode.com/u/_apoorv10/">
+    <img src="https://leetcard.jacoblin.cool/_apoorv10?theme=dark&font=baloo&ext=heatmap" alt="LeetCode Statistics" />
+  </a>
+</p>
 
 ---
 
@@ -140,20 +149,27 @@ A mobile-first hostel management platform designed to simplify everyday hostel s
 
 ---
 
-## Open Source
+## 🌍 Open Source
 
-I'm contributing to open source through **Open Source Connect India 2026**, focused on:
+### Open Source Connect India · 2026 Contributor
 
-- Reading and understanding real-world codebases
-- Investigating issues
-- Making contributions and working with maintainers
-- Participating in code review and collaborative development workflows
+I'm contributing to real-world open-source projects through **Open Source Connect India**, gaining experience with:
 
-This is an ongoing part of how I'm developing as an engineer.
+- Understanding existing codebases and project architecture
+- Investigating and fixing issues
+- Writing and submitting pull requests
+- Working with maintainers and responding to feedback
+- Following real collaborative development workflows
+
+I'm focused on making **meaningful contributions rather than just collecting contribution counts**.
 
 ---
 
 ## GitHub Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=apoorv2202&theme=github-compact&hide_border=true" alt="Apoorv's GitHub Contribution Graph" />
+</p>
 
 <!-- GITHUB-METRICS:START -->
 | Metric | Value |
@@ -174,28 +190,27 @@ This is an ongoing part of how I'm developing as an engineer.
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
-- Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
-- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
-- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
-- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
-- Pushed **0 commit(s)** to `apoorv2202/DevTrack`
+### Recent GitHub Activity
+
+- 📝 Pushed commits to `DevTrack`
+- 📝 Pushed commits to `Leetcode-Solutions`
+- 🔀 Opened a pull request in `some-repo`
+- 🐛 Worked on an issue in `some-repo`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
 *Last automatically updated: August 31, 2026 · 16:44 UTC*
 <!-- PROFILE-UPDATED:END -->
 
---
+---
 
-## Goals
+## What I'm Working Toward
 
-- Build strong Java and DSA fundamentals
-- Become a stronger problem solver
-- Make meaningful, consistent open-source contributions
-- Ship Audix and DevTrack
-- Build production-quality software
-- Continue growing through real-world projects and collaboration
-
+- 🧠 Strong Java + DSA fundamentals
+- 🌍 Meaningful open-source contributions
+- 🚀 Shipping Audix and DevTrack
+- 🏗️ Building production-quality software
+- 💻 Becoming a stronger software engineer through real-world development
 ---
 
 ## Contact
