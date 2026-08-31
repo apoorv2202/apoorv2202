@@ -1,6 +1,6 @@
 <div align="center">
 
-# Apoorv
+# Apoorv Anand
 
 **CSE @ RV College of Engineering, Bangalore · Class of 2029**
 Java · DSA · Software Engineering · Open Source
