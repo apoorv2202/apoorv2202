@@ -151,7 +151,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 ## GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=apoorv2202&theme=github-compact&hide_border=true" alt="Apoorv's GitHub Contribution Graph" />
+  <img src="https://ghchart.rshah.org/409ba5/apoorv2202" alt="Apoorv's GitHub Contribution Graph" />
 </p>
 
 <!-- GITHUB-METRICS:START -->
