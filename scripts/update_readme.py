@@ -1,6 +1,6 @@
 import os
 import re
-from datetime import datetime, timedelta
+from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import requests
@@ -10,46 +10,30 @@ USERNAME = "apoorv2202"
 README = "README.md"
 SVG_PATH = "assets/github-activity.svg"
 
-GITHUB_API = "https://api.github.com"
+GITHUB_API = "https://api.github.com/graphql"
 
 
-def github_request(endpoint):
-    token = os.getenv("GITHUB_TOKEN")
-
-    headers = {
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28"
-    }
-
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
-
-    response = requests.get(
-        f"{GITHUB_API}{endpoint}",
-        headers=headers,
-        timeout=20
-    )
-
-    response.raise_for_status()
-    return response.json()
-
-
-def github_graphql(query):
+def github_graphql(query, variables=None):
     token = os.getenv("GITHUB_TOKEN")
 
     if not token:
         raise RuntimeError(
-            "GITHUB_TOKEN is required to generate the contribution graph."
+            "GITHUB_TOKEN environment variable is required."
         )
 
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+    }
+
     response = requests.post(
-        "https://api.github.com/graphql",
-        json={"query": query},
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json"
+        GITHUB_API,
+        json={
+            "query": query,
+            "variables": variables or {},
         },
-        timeout=30
+        headers=headers,
+        timeout=30,
     )
 
     response.raise_for_status()
@@ -60,6 +44,27 @@ def github_graphql(query):
         raise RuntimeError(data["errors"])
 
     return data["data"]
+
+
+def github_request(endpoint):
+    token = os.getenv("GITHUB_TOKEN")
+
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    response = requests.get(
+        f"https://api.github.com{endpoint}",
+        headers=headers,
+        timeout=20,
+    )
+
+    response.raise_for_status()
+    return response.json()
 
 
 def replace_section(text, start_marker, end_marker, replacement):
@@ -73,22 +78,21 @@ def replace_section(text, start_marker, end_marker, replacement):
         pattern,
         f"{start_marker}\n{replacement}\n{end_marker}",
         text,
-        flags=re.DOTALL
+        flags=re.DOTALL,
     )
 
 
-def get_contributions():
-
+def generate_github_graph():
     query = """
-    query {
-      user(login: "apoorv2202") {
+    query($username: String!) {
+      user(login: $username) {
         contributionsCollection {
           contributionCalendar {
             totalContributions
             weeks {
               contributionDays {
-                contributionCount
                 date
+                contributionCount
               }
             }
           }
@@ -97,128 +101,165 @@ def get_contributions():
     }
     """
 
-    data = github_graphql(query)
-
-    return (
-        data["user"]
-        ["contributionsCollection"]
-        ["contributionCalendar"]
+    data = github_graphql(
+        query,
+        {"username": USERNAME},
     )
 
-
-def generate_svg(calendar):
+    calendar = data["user"]["contributionsCollection"]["contributionCalendar"]
 
     weeks = calendar["weeks"]
+    total = calendar["totalContributions"]
 
-    cell = 12
-    gap = 3
+    cell_size = 12
+    cell_gap = 3
+    step = cell_size + cell_gap
 
-    left = 42
-    top = 38
+    left_padding = 40
+    top_padding = 35
 
-    width = left + (len(weeks) * (cell + gap)) + 10
-    height = 7 * (cell + gap) + top + 25
-
-    max_count = max(
-        day["contributionCount"]
-        for week in weeks
-        for day in week["contributionDays"]
+    graph_width = (
+        left_padding
+        + len(weeks) * step
+        + 10
     )
 
-    if max_count == 0:
-        max_count = 1
+    graph_height = 180
 
-    def level(count):
+    # Black background with green contribution levels.
+    background = "#0d1117"
 
-        if count == 0:
-            return "#0d1117"
-
-        ratio = count / max_count
-
-        if ratio <= 0.25:
-            return "#0e4429"
-
-        if ratio <= 0.50:
-            return "#006d32"
-
-        if ratio <= 0.75:
-            return "#26a641"
-
-        return "#39d353"
+    levels = [
+        "#161b22",
+        "#0e4429",
+        "#006d32",
+        "#26a641",
+        "#39d353",
+    ]
 
     svg = []
 
     svg.append(
         f'<svg xmlns="http://www.w3.org/2000/svg" '
-        f'width="{width}" height="{height}" '
-        f'viewBox="0 0 {width} {height}">'
+        f'width="{graph_width}" '
+        f'height="{graph_height}" '
+        f'viewBox="0 0 {graph_width} {graph_height}">'
     )
 
     svg.append(
-        '<rect width="100%" height="100%" fill="#0d1117"/>'
+        f'<rect width="100%" height="100%" rx="10" fill="{background}"/>'
     )
 
+    # Title
     svg.append(
-        '<text x="15" y="22" '
+        '<text x="20" y="25" '
+        'fill="#f0f6fc" '
         'font-family="Arial, sans-serif" '
-        'font-size="16" font-weight="600" '
-        'fill="#f0f6fc">GitHub Activity</text>'
+        'font-size="16" '
+        'font-weight="600">'
+        'GitHub Activity'
+        '</text>'
     )
 
-    days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    # Day labels
+    day_labels = [
+        ("Mon", 1),
+        ("Wed", 3),
+        ("Fri", 5),
+    ]
 
-    for i, day in enumerate(days):
+    for label, row in day_labels:
+        y = top_padding + row * step + 9
 
-        if i % 2 == 1:
+        svg.append(
+            f'<text x="4" y="{y}" '
+            'fill="#8b949e" '
+            'font-family="Arial, sans-serif" '
+            'font-size="9">'
+            f'{label}'
+            '</text>'
+        )
 
-            y = top + i * (cell + gap) + 10
+    # Month labels
+    previous_month = None
+
+    for column, week in enumerate(weeks):
+        if not week["contributionDays"]:
+            continue
+
+        date = week["contributionDays"][0]["date"]
+
+        month = datetime.strptime(
+            date,
+            "%Y-%m-%d"
+        ).strftime("%b")
+
+        if month != previous_month:
+            x = left_padding + column * step
 
             svg.append(
-                f'<text x="8" y="{y}" '
+                f'<text x="{x}" y="43" '
+                'fill="#8b949e" '
                 'font-family="Arial, sans-serif" '
-                'font-size="9" fill="#8b949e">'
-                f'{day}</text>'
+                'font-size="9">'
+                f'{month}'
+                '</text>'
             )
 
-    ist = ZoneInfo("Asia/Kolkata")
+            previous_month = month
 
-    for week_index, week in enumerate(weeks):
+    # Contribution cells
+    max_count = max(
+        (
+            day["contributionCount"]
+            for week in weeks
+            for day in week["contributionDays"]
+        ),
+        default=1,
+    )
 
-        x = left + week_index * (cell + gap)
+    for column, week in enumerate(weeks):
 
-        for day in week["contributionDays"]:
+        for row, day in enumerate(
+            week["contributionDays"]
+        ):
 
-            date_str = day["date"]
             count = day["contributionCount"]
 
-            date_obj = datetime.strptime(
-                date_str,
-                "%Y-%m-%d"
-            ).replace(
-                tzinfo=ZoneInfo("UTC")
-            ).astimezone(ist)
+            if count == 0:
+                level = 0
+            elif count <= max_count * 0.25:
+                level = 1
+            elif count <= max_count * 0.50:
+                level = 2
+            elif count <= max_count * 0.75:
+                level = 3
+            else:
+                level = 4
 
-            weekday = date_obj.weekday()
-
-            x_pos = x
-            y_pos = top + weekday * (cell + gap)
-
-            fill = level(count)
+            x = left_padding + column * step
+            y = top_padding + row * step
 
             svg.append(
-                f'<rect x="{x_pos}" y="{y_pos}" '
-                f'width="{cell}" height="{cell}" '
-                f'rx="2" ry="2" fill="{fill}">'
-                f'<title>{date_str}: '
-                f'{count} contribution(s)</title>'
+                f'<rect '
+                f'x="{x}" '
+                f'y="{y}" '
+                f'width="{cell_size}" '
+                f'height="{cell_size}" '
+                f'rx="2" '
+                f'fill="{levels[level]}">'
+                f'<title>{day["date"]}: '
+                f'{count} contributions</title>'
                 f'</rect>'
             )
 
+    # Total contributions
     svg.append(
-        f'<text x="{left}" y="{height - 8}" '
+        f'<text x="20" y="170" '
+        'fill="#8b949e" '
         'font-family="Arial, sans-serif" '
-        'font-size="9" fill="#8b949e">'
-        f'{calendar["totalContributions"]} contributions'
+        'font-size="10">'
+        f'{total} contributions in the last year'
         '</text>'
     )
 
@@ -226,19 +267,28 @@ def generate_svg(calendar):
 
     os.makedirs(
         os.path.dirname(SVG_PATH),
-        exist_ok=True
+        exist_ok=True,
     )
 
     with open(
         SVG_PATH,
         "w",
-        encoding="utf-8"
+        encoding="utf-8",
     ) as file:
-
         file.write("\n".join(svg))
+
+    print(
+        f"GitHub activity graph generated: {SVG_PATH}"
+    )
 
 
 def main():
+
+    # -------------------------
+    # Generate GitHub graph
+    # -------------------------
+
+    generate_github_graph()
 
     # -------------------------
     # GitHub profile
@@ -297,6 +347,7 @@ def main():
             repo["description"]
             or "No description provided."
         )
+
         url = repo["html_url"]
 
         repository_section += (
@@ -317,18 +368,26 @@ def main():
     for event in events:
 
         event_type = event["type"]
-        repo = event.get("repo", {}).get("name")
+        repo = event.get(
+            "repo",
+            {}
+        ).get("name")
 
         if not repo:
             continue
 
         if event_type == "PushEvent":
 
-            commit_count = event["payload"].get("size")
+            commit_count = event["payload"].get(
+                "size"
+            )
 
             if commit_count is None:
                 commit_count = len(
-                    event["payload"].get("commits", [])
+                    event["payload"].get(
+                        "commits",
+                        []
+                    )
                 )
 
             activity_lines.append(
@@ -372,6 +431,18 @@ def main():
                 f"in `{repo}`"
             )
 
+        elif event_type == "DeleteEvent":
+
+            ref_type = event["payload"].get(
+                "ref_type",
+                "resource"
+            )
+
+            activity_lines.append(
+                f"- 🗑️ Deleted a {ref_type} "
+                f"in `{repo}`"
+            )
+
         elif event_type == "ForkEvent":
 
             activity_lines.append(
@@ -402,14 +473,6 @@ def main():
         )
 
     # -------------------------
-    # Generate GitHub graph
-    # -------------------------
-
-    calendar = get_contributions()
-
-    generate_svg(calendar)
-
-    # -------------------------
     # Last updated — IST
     # -------------------------
 
@@ -428,7 +491,7 @@ def main():
     with open(
         README,
         "r",
-        encoding="utf-8"
+        encoding="utf-8",
     ) as file:
 
         readme = file.read()
@@ -437,39 +500,39 @@ def main():
         readme,
         "<!-- GITHUB-METRICS:START -->",
         "<!-- GITHUB-METRICS:END -->",
-        metrics
+        metrics,
     )
 
     readme = replace_section(
         readme,
         "<!-- REPOSITORIES:START -->",
         "<!-- REPOSITORIES:END -->",
-        repository_section.strip()
+        repository_section.strip(),
     )
 
     readme = replace_section(
         readme,
         "<!-- ACTIVITY:START -->",
         "<!-- ACTIVITY:END -->",
-        activity
+        activity,
     )
 
     readme = replace_section(
         readme,
         "<!-- PROFILE-UPDATED:START -->",
         "<!-- PROFILE-UPDATED:END -->",
-        f"*Last automatically updated: {updated}*"
+        f"*Last automatically updated: {updated}*",
     )
 
     with open(
         README,
         "w",
-        encoding="utf-8"
+        encoding="utf-8",
     ) as file:
 
         file.write(readme)
 
-    print("README and GitHub activity graph updated successfully.")
+    print("README updated successfully.")
 
 
 if __name__ == "__main__":
