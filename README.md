@@ -91,7 +91,7 @@ An AI-powered video intelligence platform, designed so users can upload a video 
 - AI-driven scene and context analysis
 - Media metadata extraction
 
-`GitHub:` *link coming soon* · `Demo:` *coming soon*
+
 
 ---
 
@@ -105,7 +105,7 @@ A developer workflow and issue management platform inspired by modern developer 
 - Project and workflow organization
 - Developer collaboration features
 
-`GitHub:` *link coming soon* · `Demo:` *coming soon*
+
 
 ---
 
@@ -119,7 +119,7 @@ A security-focused platform for controlled, temporary sharing of sensitive infor
 - Security-focused backend architecture
 - Cloud-backed infrastructure with Azure integration
 
-`GitHub:` *link coming soon* · `Demo:` *coming soon*
+
 
 ---
 
@@ -136,7 +136,7 @@ A mobile-first hostel management platform designed to simplify everyday hostel s
 - Payment integration
 - Document uploads
 
-`GitHub:` *link coming soon* · `Demo:` *coming soon*
+
 
 ---
 
