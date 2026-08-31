@@ -64,18 +64,12 @@ I'm also a contributor with **Open Source Connect India 2026**, where I'm gettin
 
 ---
 
-## Problem Solving
 
 ## Problem Solving
 
 I practice DSA consistently on [LeetCode](https://leetcode.com/u/_apoorv10/).
 
-<!-- LEETCODE-STATS:START -->
-Loading LeetCode statistics...
-<!-- LEETCODE-STATS:END -->
 
-<!-- LEETCODE-STATS:START -->
-<!-- LEETCODE-STATS:END -->
 
 <p align="center">
   <a href="https://leetcode.com/u/_apoorv10/">
@@ -194,12 +188,11 @@ I'm focused on making **meaningful contributions rather than just collecting con
 
 - 📝 Pushed commits to `DevTrack`
 - 📝 Pushed commits to `Leetcode-Solutions`
-- 🔀 Opened a pull request in `some-repo`
-- 🐛 Worked on an issue in `some-repo`
+
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: August 31, 2026 · 16:44 UTC*
+*Last automatically updated: August 31, 2026 · 10:14 PM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
