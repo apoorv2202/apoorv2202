@@ -168,30 +168,30 @@ I'm focused on making **meaningful contributions rather than just collecting con
 | Public Repositories | 6 |
 | Followers | 2 |
 | Following | 1 |
-| Total Stars | 4 |
+| Total Stars | 6 |
 | Total Forks | 0 |
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
 - **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
-- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[DevTrack](https://github.com/apoorv2202/DevTrack)** — Modern, role-aware developer issue tracking platform inspired by Bugzilla
+- **[Audix](https://github.com/apoorv2202/Audix)** — AI-powered video recognition and analysis platform with a parallel, provider-based processing architecture.
+- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[secure-share](https://github.com/apoorv2202/secure-share)** — A modern privacy-focused platform for securely sharing temporary sensitive information with controlled access, client-side encryption, and proactive security protection.
-- **[HostelHub](https://github.com/apoorv2202/HostelHub)** — "A real-time hostel portal & management platform built with Flutter, Supabase, and Squidex CMS. Features a campus-restricted food ordering engine, live service ticket streams, secure multi-role registration (Students, Canteen, Cleaners, Wardens), private storage buckets, and advanced Row-Level Security policies to protect user documents."
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/DevTrack`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: September 01, 2026 · 02:05 AM IST*
+*Last automatically updated: September 01, 2026 · 07:44 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
