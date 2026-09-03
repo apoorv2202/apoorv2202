@@ -183,15 +183,15 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
-- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/apoorv2202`
-- ✨ Created a branch in `apoorv2202/apoorv2202`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: September 02, 2026 · 07:07 AM IST*
+*Last automatically updated: September 03, 2026 · 07:11 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
