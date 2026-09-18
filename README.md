@@ -165,25 +165,25 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:START -->
 | Metric | Value |
 |---|---:|
-| Public Repositories | 6 |
-| Followers | 1 |
+| Public Repositories | 7 |
+| Followers | 2 |
 | Following | 1 |
 | Total Stars | 6 |
 | Total Forks | 0 |
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
-- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
+- **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
 - **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
+- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[DevTrack](https://github.com/apoorv2202/DevTrack)** — Modern, role-aware developer issue tracking platform inspired by Bugzilla
 - **[Audix](https://github.com/apoorv2202/Audix)** — AI-powered video recognition and analysis platform with a parallel, provider-based processing architecture.
-- **[secure-share](https://github.com/apoorv2202/secure-share)** — A modern privacy-focused platform for securely sharing temporary sensitive information with controlled access, client-side encryption, and proactive security protection.
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
-- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- ✨ Created a branch in `apoorv2202/Mesh`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
@@ -191,7 +191,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: September 17, 2026 · 07:29 AM IST*
+*Last automatically updated: September 18, 2026 · 07:16 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
