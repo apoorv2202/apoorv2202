@@ -165,31 +165,33 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:START -->
 | Metric | Value |
 |---|---:|
-| Public Repositories | 6 |
-| Followers | 2 |
-| Following | 1 |
+| Public Repositories | 7 |
+| Followers | 3 |
+| Following | 3 |
 | Total Stars | 5 |
 | Total Forks | 0 |
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
+- **[apoorv-portfolio](https://github.com/apoorv2202/apoorv-portfolio)** — Responsive personal portfolio website built with HTML, CSS, and JavaScript(Skill Lab)
 - **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
 - **[Audix](https://github.com/apoorv2202/Audix)** — AI-powered video recognition and analysis platform with a parallel, provider-based processing architecture.
-- **[secure-share](https://github.com/apoorv2202/secure-share)** — A modern privacy-focused platform for securely sharing temporary sensitive information with controlled access, client-side encryption, and proactive security protection.
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
+- ✨ Created a branch in `apoorv2202/apoorv-portfolio`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- ⭐ Starred `apoorv2202/apoorv-portfolio`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: October 22, 2026 · 07:36 AM IST*
+*Last automatically updated: October 23, 2026 · 07:40 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
