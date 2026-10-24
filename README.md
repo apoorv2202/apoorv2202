@@ -173,9 +173,9 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
+- **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[apoorv-portfolio](https://github.com/apoorv2202/apoorv-portfolio)** — Responsive personal portfolio website built with HTML, CSS, and JavaScript(Skill Lab)
 - **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
-- **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
 - **[Audix](https://github.com/apoorv2202/Audix)** — AI-powered video recognition and analysis platform with a parallel, provider-based processing architecture.
 <!-- REPOSITORIES:END -->
@@ -191,7 +191,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: October 23, 2026 · 07:40 AM IST*
+*Last automatically updated: October 24, 2026 · 07:39 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
