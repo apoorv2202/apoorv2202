@@ -173,10 +173,10 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
+- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
+- **[ghost-data-still-exists](https://github.com/apoorv2202/ghost-data-still-exists)** — Evidence-driven deletion audit agent built for HackerRank Orchestrate 2026
 - **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
-- **[apoorv-portfolio](https://github.com/apoorv2202/apoorv-portfolio)** — Responsive personal portfolio website built with HTML, CSS, and JavaScript(Skill Lab)
-- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[Audix](https://github.com/apoorv2202/Audix)** — AI-powered video recognition and analysis platform with a parallel, provider-based processing architecture.
 <!-- REPOSITORIES:END -->
 
@@ -184,14 +184,14 @@ I'm focused on making **meaningful contributions rather than just collecting con
 ### Recent GitHub Activity
 
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Mesh`
-- ✨ Created a branch in `apoorv2202/apoorv-portfolio`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: October 30, 2026 · 08:38 AM IST*
+*Last automatically updated: October 31, 2026 · 08:24 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
