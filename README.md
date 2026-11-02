@@ -165,7 +165,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:START -->
 | Metric | Value |
 |---|---:|
-| Public Repositories | 8 |
+| Public Repositories | 9 |
 | Followers | 3 |
 | Following | 3 |
 | Total Stars | 5 |
@@ -173,25 +173,25 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
+- **[opentelemetry-java-contrib](https://github.com/apoorv2202/opentelemetry-java-contrib)** — No description provided.
+- **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
+- **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[gtfs-validator](https://github.com/apoorv2202/gtfs-validator)** — Canonical GTFS Validator project for schedule (static) files.
 - **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
-- **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
-- **[ghost-data-still-exists](https://github.com/apoorv2202/ghost-data-still-exists)** — Evidence-driven deletion audit agent built for HackerRank Orchestrate 2026
-- **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
-- 📝 Pushed **0 commit(s)** to `apoorv2202/ghost-data-still-exists`
-- 🔀 Opened a pull request in `MobilityData/gtfs-validator`
-- 🔀 Opened a pull request in `MobilityData/gtfs-validator`
-- 🍴 Forked `MobilityData/gtfs-validator`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/Mesh`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 🔀 Opened a pull request in `open-telemetry/opentelemetry-java-contrib`
+- 🍴 Forked `open-telemetry/opentelemetry-java-contrib`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: November 01, 2026 · 08:18 AM IST*
+*Last automatically updated: November 02, 2026 · 08:25 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
