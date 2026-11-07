@@ -173,8 +173,8 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
-- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
+- **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[opentelemetry-java-contrib](https://github.com/apoorv2202/opentelemetry-java-contrib)** — No description provided.
 - **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
 - **[gtfs-validator](https://github.com/apoorv2202/gtfs-validator)** — Canonical GTFS Validator project for schedule (static) files.
@@ -184,14 +184,14 @@ I'm focused on making **meaningful contributions rather than just collecting con
 ### Recent GitHub Activity
 
 - 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
 - 🔀 Merged a pull request in `MobilityData/gtfs-validator`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/opentelemetry-java-contrib`
-- ✨ Created a branch in `apoorv2202/opentelemetry-java-contrib`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/Mesh`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: November 06, 2026 · 09:21 AM IST*
+*Last automatically updated: November 07, 2026 · 08:56 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
