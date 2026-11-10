@@ -165,7 +165,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:START -->
 | Metric | Value |
 |---|---:|
-| Public Repositories | 9 |
+| Public Repositories | 10 |
 | Followers | 3 |
 | Following | 4 |
 | Total Stars | 5 |
@@ -173,25 +173,25 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
+- **[freshnessguard-ai](https://github.com/apoorv2202/freshnessguard-ai)** — Evidence-backed freshness verification for AI answers, powered by Bifrost and Tavily.
 - **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 - **[opentelemetry-java-contrib](https://github.com/apoorv2202/opentelemetry-java-contrib)** — No description provided.
 - **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
-- **[gtfs-validator](https://github.com/apoorv2202/gtfs-validator)** — Canonical GTFS Validator project for schedule (static) files.
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
-- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/Leetcode-Solutions`
-- 🔀 Merged a pull request in `MobilityData/gtfs-validator`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/opentelemetry-java-contrib`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
+- ✨ Created a branch in `apoorv2202/freshnessguard-ai`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: November 09, 2026 · 08:44 AM IST*
+*Last automatically updated: November 10, 2026 · 10:24 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
