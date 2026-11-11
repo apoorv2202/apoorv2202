@@ -168,30 +168,30 @@ I'm focused on making **meaningful contributions rather than just collecting con
 | Public Repositories | 10 |
 | Followers | 3 |
 | Following | 4 |
-| Total Stars | 5 |
+| Total Stars | 6 |
 | Total Forks | 0 |
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
 - **[freshnessguard-ai](https://github.com/apoorv2202/freshnessguard-ai)** — Evidence-backed freshness verification for AI answers, powered by Bifrost and Tavily.
+- **[ghost-data-still-exists](https://github.com/apoorv2202/ghost-data-still-exists)** — Evidence-driven deletion audit agent built for HackerRank Orchestrate 2026
+- **[Audix](https://github.com/apoorv2202/Audix)** — AI-powered video recognition and analysis platform with a parallel, provider-based processing architecture.
 - **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
-- **[opentelemetry-java-contrib](https://github.com/apoorv2202/opentelemetry-java-contrib)** — No description provided.
-- **[Mesh](https://github.com/apoorv2202/Mesh)** — MESH — an integrated organization management, DevSecOps, and AI-powered security decision-support platform.
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
+- ⭐ Starred `apoorv2202/ghost-data-still-exists`
+- ⭐ Starred `apoorv2202/freshnessguard-ai`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
-- 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
-- ✨ Created a branch in `apoorv2202/freshnessguard-ai`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: November 10, 2026 · 10:24 AM IST*
+*Last automatically updated: November 11, 2026 · 08:52 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
