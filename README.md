@@ -173,25 +173,25 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- GITHUB-METRICS:END -->
 
 <!-- REPOSITORIES:START -->
+- **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[freshnessguard-ai](https://github.com/apoorv2202/freshnessguard-ai)** — Evidence-backed freshness verification for AI answers, powered by Bifrost and Tavily.
 - **[ghost-data-still-exists](https://github.com/apoorv2202/ghost-data-still-exists)** — Evidence-driven deletion audit agent built for HackerRank Orchestrate 2026
 - **[Audix](https://github.com/apoorv2202/Audix)** — AI-powered video recognition and analysis platform with a parallel, provider-based processing architecture.
-- **[apoorv2202](https://github.com/apoorv2202/apoorv2202)** — CSE @ RVCE | Java & DSA | Open Source Contributor | Building real-world projects 🚀
 - **[Leetcode-Solutions](https://github.com/apoorv2202/Leetcode-Solutions)** — LeetCode solutions and DSA practice repository featuring optimized approaches across multiple problem-solving topics.
 <!-- REPOSITORIES:END -->
 
 <!-- ACTIVITY:START -->
 ### Recent GitHub Activity
 
-- ⭐ Starred `apoorv2202/ghost-data-still-exists`
-- ⭐ Starred `apoorv2202/freshnessguard-ai`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
+- 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
 - 📝 Pushed **0 commit(s)** to `apoorv2202/freshnessguard-ai`
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: November 11, 2026 · 08:52 AM IST*
+*Last automatically updated: November 12, 2026 · 10:02 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
