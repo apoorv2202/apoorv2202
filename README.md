@@ -166,7 +166,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 | Metric | Value |
 |---|---:|
 | Public Repositories | 12 |
-| Followers | 3 |
+| Followers | 4 |
 | Following | 4 |
 | Total Stars | 6 |
 | Total Forks | 0 |
@@ -191,7 +191,7 @@ I'm focused on making **meaningful contributions rather than just collecting con
 <!-- ACTIVITY:END -->
 
 <!-- PROFILE-UPDATED:START -->
-*Last automatically updated: November 24, 2026 · 12:45 PM IST*
+*Last automatically updated: November 25, 2026 · 11:19 AM IST*
 <!-- PROFILE-UPDATED:END -->
 
 ---
